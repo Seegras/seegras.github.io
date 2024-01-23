@@ -1,66 +1,104 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-     "http://www.w3.org/TR/html4/transitional.dtd">
+﻿<!DOCTYPE html>
 <html>
 <head>
-
-  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-  <title>Midnightblue</title>
-  <meta name="generator" content="LibreOffice 7.4.4.2 (Linux)"/>
-  <meta name="created" content="2024-01-22T08:37:20.654648888"/>
-  <meta name="changed" content="2024-01-23T22:24:48.629362829"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9" charset="utf-8">
 </head>
-<body>
-<h1>Config-Management-Abstract</h1>
-<h2>Infrastructure as code(ified)</h2>
-<h1 style="page-break-before:always; ">Why?</h1>
-<ul>
-<li>Documentation is hard to maintain </li>
-<li>Machine readability</li>
-<li>We have Standards. Many of them. Different ones</li>
-<li>Reproduceability</li>
-<li>Replayability</li>
-<li>Backup</li>
-<li>Versioning</li>
-</ul>
-<h1 style="page-break-before:always; ">How?</h1>
-<ul>
-<li>As a diff?</li>
-<li>A definition of the complete system?</li>
-<li>A definition of important parts?</li>
-</ul>
-<h1 style="page-break-before:always; ">Caveats</h1>
-<ul>
-<li>Diff</li>
-<ul>
-<li>Outcome may vary</li>
-</ul>
-<li>Complete Definition</li>
-<ul>
-<li>Must be adapted frequently</li>
-<li>Becomes a (security-) liability</li>
-</ul>
-<li>Part Definition</li>
-<ul>
-<li>Subject to changes in un(der)defined parts</li>
-</ul>
-</ul>
-<h1 style="page-break-before:always; ">What?</h1>
-<ul>
-<li>Configs</li>
-<li>Secrets?</li>
-<li>Packages</li>
-<li>Operating Systems</li>
-<li>Connections and Network</li>
-<li>Hardware Definitions</li>
-</ul>
-<h1 style="page-break-before:always; ">More?</h1>
-<ul>
-<li>Monitoring as the unit-test of engineering</li>
-<li>Staging environments</li>
-<li>Continuous Integration</li>
-<li>Orchestration</li>
-</ul>
-<h1 style="page-break-before:always; ">Questions?
-@seegras</h1>
-</body>
+<body><style>.slide {
+              position: relative;
+              box-sizing: border-box; }
+
+              @media only screen and (max-width:1074.3334px) {
+				.slides-canvas { width: 100%; margin-top: calc(((100% - 100vw*0.43749994)/2) - 295.65628px); }
+			  }
+            </style>
+<div class="slide" name="slide" id="slideslideIface1" ><div class="slideTitle">Config-Management-Abstract</div><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.013889in" height="6.1944447in" class="slides-canvas" pointer-events="none" viewBox="0 0 793 446">
+  <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
+    <rect x="0" y="0" width="793.75" height="446.4844" fill="#FFFFFF" />
+    <path fill="#2C3E50" d="M0 0L793.75 0 793.75 446.48 0 446.48z" />
+    <path fill="#1ABC9C" fill-opacity="0.2" d="M0 0L793.75 0 793.75 297.66 0 297.66z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 0L793.75 0 793.75 297.66 0 297.66z" />
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 223.24219)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="20.25pt" fill="#FFFFFF" x="179.52682" y="43.540764"><tspan x="179.52682" y="43.540764">Config-Management-Abstract</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 308.28683)"><text font-family="Arial" font-style="normal" font-weight="normal" font-stretch="normal" font-size="16.5pt" fill="#FFFFFF" x="234.40182" y="66.6605"><tspan x="234.40182" y="66.6605">Infrastructure as code(ified)</tspan></text></g>
+  </g>
+</svg></div>
+<div class="slide" name="slide" id="slideslideIface2" ><div class="slideTitle">Why?</div><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.013889in" height="6.1944447in" class="slides-canvas" pointer-events="none" viewBox="0 0 793 446">
+  <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
+    <rect x="0" y="0" width="793.75" height="446.4844" fill="#FFFFFF" />
+    <path fill="#2C3E50" d="M0 425.22L793.75 425.22 793.75 446.48 0 446.48z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 425.22L793.75 425.22 793.75 446.48 0 446.48z" />
+    <path fill="#2C3E50" d="M0 0L793.75 0 793.75 95.68 0 95.68z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 0L793.75 0 793.75 95.68 0 95.68z" />
+    <path fill="#1ABC9C" d="M733.51 425.22C733.51 415.44 741.44 407.51 751.23 407.51L751.23 407.51C761.01 407.51 768.95 415.44 768.95 425.22L768.95 425.22C768.95 435.01 761.01 442.94 751.23 442.94L751.23 442.94C741.44 442.94 733.51 435.01 733.51 425.22z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M733.51 425.22C733.51 415.44 741.44 407.51 751.23 407.51L751.23 407.51C761.01 407.51 768.95 415.44 768.95 425.22L768.95 425.22C768.95 435.01 761.01 442.94 751.23 442.94L751.23 442.94C741.44 442.94 733.51 435.01 733.51 425.22z" />
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 17.774328)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="20.25pt" fill="#FFFFFF" x="0" y="38.402412"><tspan x="0" y="38.402412">Why?</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 116.9364)"><text font-family="WenQuanYi Zen Hei" font-style="normal" font-weight="normal" font-stretch="normal" font-size="8.475pt" fill="#2C3E50" x="34.067856" y="262.1371"><tspan x="8.504463" y="23.337063">●</tspan><tspan x="34.067856" y="23.337063" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Documentation is hard to maintain</tspan><tspan xml:space="preserve" x="428.44287" y="23.337063" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt"> </tspan><tspan x="8.504463" y="63.137062">●</tspan><tspan x="34.067856" y="63.137062" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Machine readability</tspan><tspan x="8.504463" y="102.93706">●</tspan><tspan x="34.067856" y="102.93706" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">We have Standards. Many of them. Different ones</tspan><tspan x="8.504463" y="142.73706">●</tspan><tspan x="34.067856" y="142.73706" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Reproduceability</tspan><tspan x="8.504463" y="182.53706">●</tspan><tspan x="34.067856" y="182.53706" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Replayability</tspan><tspan x="8.504463" y="222.33707">●</tspan><tspan x="34.067856" y="222.33707" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Backup</tspan><tspan x="8.504463" y="262.1371">●</tspan><tspan x="34.067856" y="262.1371" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Versioning</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 722.87946, 407.50558)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="13.5pt" fill="#FFFFFF" x="23.348215" y="24.420433"><tspan x="23.348215" y="24.420433">2</tspan></text></g>
+  </g>
+</svg></div>
+<div class="slide" name="slide" id="slideslideIface3" ><div class="slideTitle">How?</div><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.013889in" height="6.1944447in" class="slides-canvas" pointer-events="none" viewBox="0 0 793 446">
+  <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
+    <rect x="0" y="0" width="793.75" height="446.4844" fill="#FFFFFF" />
+    <path fill="#2C3E50" d="M0 425.22L793.75 425.22 793.75 446.48 0 446.48z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 425.22L793.75 425.22 793.75 446.48 0 446.48z" />
+    <path fill="#2C3E50" d="M0 0L793.75 0 793.75 95.68 0 95.68z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 0L793.75 0 793.75 95.68 0 95.68z" />
+    <path fill="#1ABC9C" d="M733.51 425.22C733.51 415.44 741.44 407.51 751.23 407.51L751.23 407.51C761.01 407.51 768.95 415.44 768.95 425.22L768.95 425.22C768.95 435.01 761.01 442.94 751.23 442.94L751.23 442.94C741.44 442.94 733.51 435.01 733.51 425.22z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M733.51 425.22C733.51 415.44 741.44 407.51 751.23 407.51L751.23 407.51C761.01 407.51 768.95 415.44 768.95 425.22L768.95 425.22C768.95 435.01 761.01 442.94 751.23 442.94L751.23 442.94C741.44 442.94 733.51 435.01 733.51 425.22z" />
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 17.774332)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="20.25pt" fill="#FFFFFF" x="0" y="38.35989"><tspan x="0" y="38.35989">How?</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 184.26338)"><text font-family="WenQuanYi Zen Hei" font-style="normal" font-weight="normal" font-stretch="normal" font-size="8.475pt" fill="#2C3E50" x="34.067856" y="102.93706"><tspan x="8.504463" y="23.337063">●</tspan><tspan x="34.067856" y="23.337063" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">As a diff?</tspan><tspan x="8.504463" y="63.137062">●</tspan><tspan x="34.067856" y="63.137062" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">A definition of the complete system?</tspan><tspan x="8.504463" y="102.93706">●</tspan><tspan x="34.067856" y="102.93706" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">A definition of important parts?</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 722.87946, 407.50558)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="13.5pt" fill="#FFFFFF" x="23.348215" y="24.420433"><tspan x="23.348215" y="24.420433">3</tspan></text></g>
+  </g>
+</svg></div>
+<div class="slide" name="slide" id="slideslideIface4" ><div class="slideTitle">Caveats</div><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.013889in" height="6.1944447in" class="slides-canvas" pointer-events="none" viewBox="0 0 793 446">
+  <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
+    <rect x="0" y="0" width="793.75" height="446.4844" fill="#FFFFFF" />
+    <path fill="#2C3E50" d="M0 425.22L793.75 425.22 793.75 446.48 0 446.48z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 425.22L793.75 425.22 793.75 446.48 0 446.48z" />
+    <path fill="#2C3E50" d="M0 0L793.75 0 793.75 95.68 0 95.68z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 0L793.75 0 793.75 95.68 0 95.68z" />
+    <path fill="#1ABC9C" d="M733.51 425.22C733.51 415.44 741.44 407.51 751.23 407.51L751.23 407.51C761.01 407.51 768.95 415.44 768.95 425.22L768.95 425.22C768.95 435.01 761.01 442.94 751.23 442.94L751.23 442.94C741.44 442.94 733.51 435.01 733.51 425.22z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M733.51 425.22C733.51 415.44 741.44 407.51 751.23 407.51L751.23 407.51C761.01 407.51 768.95 415.44 768.95 425.22L768.95 425.22C768.95 435.01 761.01 442.94 751.23 442.94L751.23 442.94C741.44 442.94 733.51 435.01 733.51 425.22z" />
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 17.774332)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="20.25pt" fill="#FFFFFF" x="0" y="38.35989"><tspan x="0" y="38.35989">Caveats</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 116.9364)"><text font-family="WenQuanYi Zen Hei" font-style="normal" font-weight="normal" font-stretch="normal" font-size="8.475pt" fill="#2C3E50" x="68.08572" y="242.4199"><tspan x="8.504463" y="23.337063">●</tspan><tspan x="34.067856" y="23.337063" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Diff</tspan><tspan x="42.52232" y="60.219925" font-family="Arial" font-stretch="normal" font-size="12.1875pt">–</tspan><tspan x="68.08572" y="60.219925" font-family="Arial" font-stretch="normal" font-size="15.75pt">Outcome may vary</tspan><tspan x="8.504463" y="97.33705">●</tspan><tspan x="34.067856" y="97.33705" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Complete Definition</tspan><tspan x="42.52232" y="134.21991" font-family="Arial" font-stretch="normal" font-size="12.1875pt">–</tspan><tspan x="68.08572" y="134.21991" font-family="Arial" font-stretch="normal" font-size="15.75pt">Must be adapted frequently</tspan><tspan x="42.52232" y="168.4199" font-family="Arial" font-stretch="normal" font-size="12.1875pt">–</tspan><tspan x="68.08572" y="168.4199" font-family="Arial" font-stretch="normal" font-size="15.75pt">Becomes a (security-) liability</tspan><tspan x="8.504463" y="205.53705">●</tspan><tspan x="34.067856" y="205.53705" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Part Definition</tspan><tspan x="42.52232" y="242.4199" font-family="Arial" font-stretch="normal" font-size="12.1875pt">–</tspan><tspan x="68.08572" y="242.4199" font-family="Arial" font-stretch="normal" font-size="15.75pt">Subject to changes in un(der)defined parts</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 722.87946, 407.50558)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="13.5pt" fill="#FFFFFF" x="23.348215" y="24.420433"><tspan x="23.348215" y="24.420433">4</tspan></text></g>
+  </g>
+</svg></div>
+<div class="slide" name="slide" id="slideslideIface5" ><div class="slideTitle">What?</div><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.013889in" height="6.1944447in" class="slides-canvas" pointer-events="none" viewBox="0 0 793 446">
+  <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
+    <rect x="0" y="0" width="793.75" height="446.4844" fill="#FFFFFF" />
+    <path fill="#2C3E50" d="M0 425.22L793.75 425.22 793.75 446.48 0 446.48z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 425.22L793.75 425.22 793.75 446.48 0 446.48z" />
+    <path fill="#2C3E50" d="M0 0L793.75 0 793.75 95.68 0 95.68z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 0L793.75 0 793.75 95.68 0 95.68z" />
+    <path fill="#1ABC9C" d="M733.51 425.22C733.51 415.44 741.44 407.51 751.23 407.51L751.23 407.51C761.01 407.51 768.95 415.44 768.95 425.22L768.95 425.22C768.95 435.01 761.01 442.94 751.23 442.94L751.23 442.94C741.44 442.94 733.51 435.01 733.51 425.22z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M733.51 425.22C733.51 415.44 741.44 407.51 751.23 407.51L751.23 407.51C761.01 407.51 768.95 415.44 768.95 425.22L768.95 425.22C768.95 435.01 761.01 442.94 751.23 442.94L751.23 442.94C741.44 442.94 733.51 435.01 733.51 425.22z" />
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 17.774332)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="20.25pt" fill="#FFFFFF" x="0" y="38.35989"><tspan x="0" y="38.35989">What?</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 136.78012)"><text font-family="WenQuanYi Zen Hei" font-style="normal" font-weight="normal" font-stretch="normal" font-size="8.475pt" fill="#2C3E50" x="34.067856" y="222.33707"><tspan x="8.504463" y="23.337063">●</tspan><tspan x="34.067856" y="23.337063" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Configs</tspan><tspan x="8.504463" y="63.137062">●</tspan><tspan x="34.067856" y="63.137062" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Secrets?</tspan><tspan x="8.504463" y="102.93706">●</tspan><tspan x="34.067856" y="102.93706" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Packages</tspan><tspan x="8.504463" y="142.73706">●</tspan><tspan x="34.067856" y="142.73706" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Operating Systems</tspan><tspan x="8.504463" y="182.53706">●</tspan><tspan x="34.067856" y="182.53706" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Connections and Network</tspan><tspan x="8.504463" y="222.33707">●</tspan><tspan x="34.067856" y="222.33707" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Hardware Definitions</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 722.87946, 407.50558)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="13.5pt" fill="#FFFFFF" x="23.348215" y="24.420433"><tspan x="23.348215" y="24.420433">5</tspan></text></g>
+  </g>
+</svg></div>
+<div class="slide" name="slide" id="slideslideIface6" ><div class="slideTitle">More?</div><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.013889in" height="6.1944447in" class="slides-canvas" pointer-events="none" viewBox="0 0 793 446">
+  <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
+    <rect x="0" y="0" width="793.75" height="446.4844" fill="#FFFFFF" />
+    <path fill="#2C3E50" d="M0 425.22L793.75 425.22 793.75 446.48 0 446.48z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 425.22L793.75 425.22 793.75 446.48 0 446.48z" />
+    <path fill="#2C3E50" d="M0 0L793.75 0 793.75 95.68 0 95.68z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M0 0L793.75 0 793.75 95.68 0 95.68z" />
+    <path fill="#1ABC9C" d="M733.51 425.22C733.51 415.44 741.44 407.51 751.23 407.51L751.23 407.51C761.01 407.51 768.95 415.44 768.95 425.22L768.95 425.22C768.95 435.01 761.01 442.94 751.23 442.94L751.23 442.94C741.44 442.94 733.51 435.01 733.51 425.22z" />
+    <path stroke-width="0.8504464" stroke="#1ABC9C" fill="none" d="M733.51 425.22C733.51 415.44 741.44 407.51 751.23 407.51L751.23 407.51C761.01 407.51 768.95 415.44 768.95 425.22L768.95 425.22C768.95 435.01 761.01 442.94 751.23 442.94L751.23 442.94C741.44 442.94 733.51 435.01 733.51 425.22z" />
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 17.774332)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="20.25pt" fill="#FFFFFF" x="0" y="38.35989"><tspan x="0" y="38.35989">More?</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 28.348206, 173.63281)"><text font-family="WenQuanYi Zen Hei" font-style="normal" font-weight="normal" font-stretch="normal" font-size="8.475pt" fill="#2C3E50" x="34.067856" y="142.73706"><tspan x="8.504463" y="23.337063">●</tspan><tspan x="34.067856" y="23.337063" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Monitoring as the unit-test of engineering</tspan><tspan x="8.504463" y="63.137062">●</tspan><tspan x="34.067856" y="63.137062" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Staging environments</tspan><tspan x="8.504463" y="102.93706">●</tspan><tspan x="34.067856" y="102.93706" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Continuous Integration</tspan><tspan x="8.504463" y="142.73706">●</tspan><tspan x="34.067856" y="142.73706" font-weight="bold" font-family="Arial" font-stretch="normal" font-size="18pt">Orchestration</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 722.87946, 407.50558)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="13.5pt" fill="#FFFFFF" x="23.348215" y="24.420433"><tspan x="23.348215" y="24.420433">6</tspan></text></g>
+  </g>
+</svg></div>
+<div class="slide" name="slide" id="slideslideIface7" ><div class="slideTitle">Questions?@seegras</div><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.013889in" height="6.1944447in" class="slides-canvas" pointer-events="none" viewBox="0 0 793 446">
+  <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
+    <rect x="0" y="0" width="793.75" height="446.4844" fill="#FFFFFF" />
+    <path fill="#2C3E50" d="M0 0L793.75 0 793.75 446.48 0 446.48z" />
+    <path fill="#FFFFFF" d="M198.44 106.31L198.44 131.04 198.44 149.58 198.44 168.11 198.44 193.33 198.44 211.86 198.44 230.4 198.44 255.13 264.4 255.13 261.83 378.54 363.25 255.13 430.5 255.13 479.92 255.13 529.35 255.13 595.31 255.13 595.31 230.4 595.31 211.86 595.31 193.33 595.31 168.11 595.31 149.58 595.31 131.04 595.31 106.31 529.35 106.31 479.92 106.31 430.5 106.31 363.25 106.31 313.83 106.31 264.4 106.31 198.44 106.31z" />
+    <path stroke-width="5.669643" stroke="#FFFFFF" fill="none" d="M198.44 106.31L198.44 131.04 198.44 149.58 198.44 168.11 198.44 193.33 198.44 211.86 198.44 230.4 198.44 255.13 264.4 255.13 261.83 378.54 363.25 255.13 430.5 255.13 479.92 255.13 529.35 255.13 595.31 255.13 595.31 230.4 595.31 211.86 595.31 193.33 595.31 168.11 595.31 149.58 595.31 131.04 595.31 106.31 529.35 106.31 479.92 106.31 430.5 106.31 363.25 106.31 313.83 106.31 264.4 106.31 198.44 106.31z" />
+    <g transform="matrix(1, 0, 0, 1, 212.6116, 113.39287)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="20.25pt" fill="#2C3E50" x="120.07591" y="90.037674"><tspan x="110.01341" y="57.637672">Questions?</tspan><tspan x="120.07591" y="90.037674">@seegras</tspan></text></g>
+    <g transform="matrix(1, 0, 0, 1, 722.87946, 403.96207)"><text font-family="Arial" font-style="normal" font-weight="bold" font-stretch="normal" font-size="13.5pt" fill="#FFFFFF" x="23.348215" y="27.963959"><tspan x="23.348215" y="27.963959">7</tspan></text></g>
+  </g>
+</svg></div></body>
 </html>
