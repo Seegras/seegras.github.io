@@ -22,8 +22,6 @@ Infrastructure as code(ified)
 
 ## How?
 
----
-
 * As a diff?
 * A definition of the complete system?
 * A definition of important parts?
@@ -41,6 +39,7 @@ Infrastructure as code(ified)
   * Subject to changes in un(der)defined parts
 
 ---
+
 ## What?
 
 * Configs
@@ -61,11 +60,8 @@ Infrastructure as code(ified)
 
 ---
 
----
-
 ## Questions? 
 
 @seegras
 
----
 
