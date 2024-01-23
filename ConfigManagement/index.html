@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.121.2">
+    <meta charset="utf-8">
+<title>Config-Management-Abstract</title>
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/ConfigManagement/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/ConfigManagement/reveal-js/css/reveal.css"><link rel="stylesheet" href="/ConfigManagement/reveal-js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="/ConfigManagement/highlight-js/default.min.css">
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h2 id="config-management-abstract">Config-Management-Abstract</h2>
+<p>Infrastructure as code(ified)</p>
+</section><section>
+<h2 id="why">Why?</h2>
+<ul>
+<li>Documentation is hard to maintain</li>
+<li>Machine readability</li>
+<li>We have Standards. Many of them. Different ones</li>
+<li>Reproduceability</li>
+<li>Replayability</li>
+<li>Backup</li>
+<li>Versioning</li>
+</ul>
+</section><section>
+<h2 id="how">How?</h2>
+</section><section>
+<ul>
+<li>As a diff?</li>
+<li>A definition of the complete system?</li>
+<li>A definition of important parts?</li>
+</ul>
+</section><section>
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li>Diff
+<ul>
+<li>Outcome may vary</li>
+</ul>
+</li>
+<li>Complete Definition
+<ul>
+<li>Must be adapted frequently</li>
+<li>Becomes a (security-) liability</li>
+</ul>
+</li>
+<li>Part Definition
+<ul>
+<li>Subject to changes in un(der)defined parts</li>
+</ul>
+</li>
+</ul>
+</section><section>
+<h2 id="what">What?</h2>
+<ul>
+<li>Configs</li>
+<li>Secrets?</li>
+<li>Packages</li>
+<li>Operating Systems</li>
+<li>Connections and Network</li>
+<li>Hardware Definitions</li>
+</ul>
+</section><section>
+<h2 id="more">More?</h2>
+<ul>
+<li>Monitoring as the unit-test of engineering</li>
+<li>Staging environments</li>
+<li>Continuous Integration</li>
+<li>Orchestration</li>
+</ul>
+</section><section>
+</section><section>
+<h2 id="questions">Questions?</h2>
+<p>@seegras</p>
+</section><section>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/ConfigManagement/reveal-hugo/object-assign.js></script>
+
+<a href="/ConfigManagement/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">null</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/ConfigManagement/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/ConfigManagement/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/ConfigManagement/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/ConfigManagement/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/ConfigManagement/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/ConfigManagement/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    
+    
+  </body>
+</html>
