@@ -1,5 +1,5 @@
 publishDir = "ConfigManagement"
-baseURL = "/"
+baseURL = "ConfigManagement/"
 languageCode = "en-gb"
 title = "Config-Management-Abstract"
 theme = "reveal-hugo"
