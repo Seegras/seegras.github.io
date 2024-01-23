@@ -10,8 +10,7 @@ An exercise in automation
 
 ## Dockerfile
 
-{{ $lang := "bash" }}
-{{< highlight go "style=github,linenos=inline,hl_lines=6" >}}
+{{< highlight bash "style=github,linenos=inline,hl_lines=6" >}}
 FROM openjdk:17
 
 RUN useradd --create-home appuser
@@ -25,8 +24,7 @@ CMD java -Xmx2G -Xms1024M -jar fabric-server-mc.1.19.2-loader.0.14.11-launcher.0
 
 ## Build & Run
 
-{{ $lang := "bash" }}
-{{< highlight go "style=github" >}}
+{{< highlight bash "style=github" >}}
 docker build -t minecraft .
 docker run --rm --name minecraft-server -p 25565:25565 -v `pwd`:/home/appuser minecraft 
 {{< /highlight >}}

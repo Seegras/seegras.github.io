@@ -23,20 +23,17 @@
 <p>An exercise in automation</p>
 </section><section>
 <h2 id="dockerfile">Dockerfile</h2>
-<p>{{ $lang := &ldquo;bash&rdquo; }}
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>FROM openjdk:<span style="color:#099">17</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>FROM openjdk:17
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>RUN useradd <span style="color:#000;font-weight:bold">--</span>create<span style="color:#000;font-weight:bold">-</span>home appuser
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>WORKDIR <span style="color:#000;font-weight:bold">/</span>home<span style="color:#000;font-weight:bold">/</span>appuser
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>RUN useradd --create-home appuser
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>WORKDIR /home/appuser
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>USER appuser
 </span></span><span style="display:flex; background-color:#e5e5e5"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>CMD java <span style="color:#000;font-weight:bold">-</span>Xmx2G <span style="color:#000;font-weight:bold">-</span>Xms1024M <span style="color:#000;font-weight:bold">-</span>jar fabric<span style="color:#000;font-weight:bold">-</span>server<span style="color:#000;font-weight:bold">-</span>mc<span style="color:#099">.1.19.2</span><span style="color:#000;font-weight:bold">-</span>loader<span style="color:#099">.0.14.11</span><span style="color:#000;font-weight:bold">-</span>launcher<span style="color:#099">.0.11.1</span>.jar nogui</span></span></code></pre></div></p>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>CMD java -Xmx2G -Xms1024M -jar fabric-server-mc.1.19.2-loader.0.14.11-launcher.0.11.1.jar nogui</span></span></code></pre></div>
 </section><section>
 <h2 id="build--run">Build &amp; Run</h2>
-<p>{{ $lang := &ldquo;bash&rdquo; }}
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>docker build <span style="color:#000;font-weight:bold">-</span>t minecraft .
-</span></span><span style="display:flex;"><span>docker run <span style="color:#000;font-weight:bold">--</span>rm <span style="color:#000;font-weight:bold">--</span>name minecraft<span style="color:#000;font-weight:bold">-</span>server <span style="color:#000;font-weight:bold">-</span>p <span style="color:#099">25565</span>:<span style="color:#099">25565</span> <span style="color:#000;font-weight:bold">-</span>v <span style="color:#d14">`pwd`</span>:<span style="color:#000;font-weight:bold">/</span>home<span style="color:#000;font-weight:bold">/</span>appuser minecraft 
-</span></span></code></pre></div></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>docker build -t minecraft .
+</span></span><span style="display:flex;"><span>docker run --rm --name minecraft-server -p 25565:25565 -v <span style="color:#d14">`</span><span style="color:#0086b3">pwd</span><span style="color:#d14">`</span>:/home/appuser minecraft </span></span></code></pre></div>
 </section><section>
 <h2 id="caveats">Caveats</h2>
 <ul>
