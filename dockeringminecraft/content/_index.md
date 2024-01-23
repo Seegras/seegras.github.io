@@ -10,7 +10,7 @@ An exercise in automation
 
 ## Dockerfile
 
-{{< highlight bash "style=github,linenos=inline,hl_lines=6" >}}
+{{< highlight bash "style=github,linenos=inline,hl_lines=7" >}}
 FROM openjdk:17
 
 RUN useradd --create-home appuser

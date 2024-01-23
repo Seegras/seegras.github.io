@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/DockeringMinecraft/reveal-js/css/reset.css">
-<link rel="stylesheet" href="/DockeringMinecraft/reveal-js/css/reveal.css"><link rel="stylesheet" href="/DockeringMinecraft/reveal-js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="/DockeringMinecraft/reveal-js/css/reveal.css"><link rel="stylesheet" href="/DockeringMinecraft/reveal-js/css/theme/moon.css" id="theme">
 <link rel="stylesheet" href="/DockeringMinecraft/highlight-js/default.min.css">
     
   </head>
@@ -28,8 +28,8 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>RUN useradd --create-home appuser
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>WORKDIR /home/appuser
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>USER appuser
-</span></span><span style="display:flex; background-color:#e5e5e5"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>CMD java -Xmx2G -Xms1024M -jar fabric-server-mc.1.19.2-loader.0.14.11-launcher.0.11.1.jar nogui</span></span></code></pre></div>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
+</span></span><span style="display:flex; background-color:#e5e5e5"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>CMD java -Xmx2G -Xms1024M -jar fabric-server-mc.1.19.2-loader.0.14.11-launcher.0.11.1.jar nogui</span></span></code></pre></div>
 </section><section>
 <h2 id="build--run">Build &amp; Run</h2>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>docker build -t minecraft .
@@ -96,7 +96,7 @@
   document.getElementsByTagName('head')[0].appendChild(link);
 </script>
 
-<script type="application/json" id="reveal-hugo-site-params">null</script>
+<script type="application/json" id="reveal-hugo-site-params">{"theme":"moon"}</script>
 <script type="application/json" id="reveal-hugo-page-params">null</script>
 
 <script src="/DockeringMinecraft/reveal-js/js/reveal.js"></script>
