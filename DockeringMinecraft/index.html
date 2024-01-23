@@ -3,7 +3,7 @@
   <head>
 	<meta name="generator" content="Hugo 0.121.2">
     <meta charset="utf-8">
-<title>Config-Management-Abstract</title>
+<title>Dockering Minecraft</title>
 
 
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,26 +19,22 @@
       <div class="slides">
   
 
-    <section><h2 id="config-management-abstract">Config-Management-Abstract</h2>
-<p>Infrastructure as code(ified)</p>
+    <section><h2 id="dockering-minecraft">Dockering Minecraft</h2>
+<p>An exercise in automation</p>
 </section><section>
-<h2 id="why">Why?</h2>
-<ul>
-<li>Documentation is hard to maintain</li>
-<li>Machine readability</li>
-<li>We have Standards. Many of them. Different ones</li>
-<li>Reproduceability</li>
-<li>Replayability</li>
-<li>Backup</li>
-<li>Versioning</li>
-</ul>
+<h2 id="dockerfile">Dockerfile</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="nohighlight" data-noescape><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>FROM openjdk:<span style="color:#099">17</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>RUN useradd <span style="color:#000;font-weight:bold">--</span>create<span style="color:#000;font-weight:bold">-</span>home appuser
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>WORKDIR <span style="color:#000;font-weight:bold">/</span>home<span style="color:#000;font-weight:bold">/</span>appuser
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>USER appuser
+</span></span><span style="display:flex; background-color:#e5e5e5"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>CMD java <span style="color:#000;font-weight:bold">-</span>Xmx2G <span style="color:#000;font-weight:bold">-</span>Xms1024M <span style="color:#000;font-weight:bold">-</span>jar fabric<span style="color:#000;font-weight:bold">-</span>server<span style="color:#000;font-weight:bold">-</span>mc<span style="color:#099">.1.19.2</span><span style="color:#000;font-weight:bold">-</span>loader<span style="color:#099">.0.14.11</span><span style="color:#000;font-weight:bold">-</span>launcher<span style="color:#099">.0.11.1</span>.jar nogui</span></span></code></pre></div>
 </section><section>
-<h2 id="how">How?</h2>
-<ul>
-<li>As a diff?</li>
-<li>A definition of the complete system?</li>
-<li>A definition of important parts?</li>
-</ul>
+<h2 id="build--run">Build &amp; Run</h2>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>docker build <span style="color:#000;font-weight:bold">-</span>t minecraft .
+</span></span><span style="display:flex;"><span>docker run <span style="color:#000;font-weight:bold">--</span>rm <span style="color:#000;font-weight:bold">--</span>name minecraft<span style="color:#000;font-weight:bold">-</span>server <span style="color:#000;font-weight:bold">-</span>p <span style="color:#099">25565</span>:<span style="color:#099">25565</span> <span style="color:#000;font-weight:bold">-</span>v <span style="color:#d14">`pwd`</span>:<span style="color:#000;font-weight:bold">/</span>home<span style="color:#000;font-weight:bold">/</span>appuser minecraft 
+</span></span></code></pre></div>
 </section><section>
 <h2 id="caveats">Caveats</h2>
 <ul>

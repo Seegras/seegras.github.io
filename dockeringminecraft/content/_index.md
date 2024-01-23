@@ -1,30 +1,33 @@
 +++
 outputs = ["Reveal"]
-title = "Config-Management-Abstract"
+title = "Dockering Minecraft"
 
 +++
-## Config-Management-Abstract
-Infrastructure as code(ified)
+## Dockering Minecraft
+An exercise in automation
 
 ---
 
-## Why?
+## Dockerfile
 
-* Documentation is hard to maintain
-* Machine readability
-* We have Standards. Many of them. Different ones
-* Reproduceability
-* Replayability
-* Backup
-* Versioning
+{{< highlight go "style=github,linenos=inline,hl_lines=6" >}}
+FROM openjdk:17
+
+RUN useradd --create-home appuser
+WORKDIR /home/appuser
+USER appuser
+
+CMD java -Xmx2G -Xms1024M -jar fabric-server-mc.1.19.2-loader.0.14.11-launcher.0.11.1.jar nogui
+{{< /highlight >}}
 
 ---
 
-## How?
+## Build & Run
 
-* As a diff?
-* A definition of the complete system?
-* A definition of important parts?
+{{< highlight go "style=github" >}}
+docker build -t minecraft .
+docker run --rm --name minecraft-server -p 25565:25565 -v `pwd`:/home/appuser minecraft 
+{{< /highlight >}}
 
 ---
 
