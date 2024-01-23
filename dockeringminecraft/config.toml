@@ -1,8 +1,9 @@
-publishDir = "ConfigManagement"
-baseURL = "ConfigManagement/"
+publishDir = "../DockeringMinecraft"
+baseURL = "https://seegras.github.io/DockeringMinecraft/"
 languageCode = "en-gb"
-title = "Config-Management-Abstract"
+title = "Dockering Minecraft"
 theme = "reveal-hugo"
+themesDir = "../themes"
 
 [markup.goldmark.renderer]
 unsafe = true

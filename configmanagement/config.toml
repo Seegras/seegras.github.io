@@ -1,0 +1,15 @@
+publishDir = "../ConfigManagement"
+baseURL = "https://seegras.github.io/ConfigManagement/"
+languageCode = "en-gb"
+title = "Config-Management-Abstract"
+theme = "reveal-hugo"
+themesDir = "../themes"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
+
