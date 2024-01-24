@@ -32,6 +32,7 @@ Infrastructure as code(ified)
 
 * Diff
   * Outcome may vary
+  * No Idempotency 
 * Complete Definition
   * Must be adapted frequently
   * Becomes a (security-) liability
