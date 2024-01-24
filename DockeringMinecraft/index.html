@@ -29,49 +29,14 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>WORKDIR /home/appuser
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>USER appuser
 </span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
-</span></span><span style="display:flex; background-color:#e5e5e5"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>CMD java -Xmx2G -Xms1024M -jar fabric-server-mc.1.19.2-loader.0.14.11-launcher.0.11.1.jar nogui</span></span></code></pre></div>
+</span></span><span style="display:flex; background-color:#e5e5e5"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>CMD java -Xmx2G -Xms1024M -jar <span style="color:#d14">\
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span><span style="color:#d14"></span>fabric-server-mc.1.19.2-loader.0.14.11-launcher.0.11.1.jar <span style="color:#d14">\
+</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9</span><span><span style="color:#d14"></span> nogui</span></span></code></pre></div>
 </section><section>
 <h2 id="build--run">Build &amp; Run</h2>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="nohighlight" data-noescape><span style="display:flex;"><span>docker build -t minecraft .
-</span></span><span style="display:flex;"><span>docker run --rm --name minecraft-server -p 25565:25565 -v <span style="color:#d14">`</span><span style="color:#0086b3">pwd</span><span style="color:#d14">`</span>:/home/appuser minecraft </span></span></code></pre></div>
-</section><section>
-<h2 id="caveats">Caveats</h2>
-<ul>
-<li>Diff
-<ul>
-<li>Outcome may vary</li>
-</ul>
-</li>
-<li>Complete Definition
-<ul>
-<li>Must be adapted frequently</li>
-<li>Becomes a (security-) liability</li>
-</ul>
-</li>
-<li>Part Definition
-<ul>
-<li>Subject to changes in un(der)defined parts</li>
-</ul>
-</li>
-</ul>
-</section><section>
-<h2 id="what">What?</h2>
-<ul>
-<li>Configs</li>
-<li>Secrets?</li>
-<li>Packages</li>
-<li>Operating Systems</li>
-<li>Connections and Network</li>
-<li>Hardware Definitions</li>
-</ul>
-</section><section>
-<h2 id="more">More?</h2>
-<ul>
-<li>Monitoring as the unit-test of engineering</li>
-<li>Staging environments</li>
-<li>Continuous Integration</li>
-<li>Orchestration</li>
-</ul>
+</span></span><span style="display:flex;"><span>docker run --rm --name minecraft-server -p 25565:25565 -v <span style="color:#d14">\
+</span></span></span><span style="display:flex;"><span><span style="color:#d14"></span> <span style="color:#d14">`</span><span style="color:#0086b3">pwd</span><span style="color:#d14">`</span>:/home/appuser minecraft </span></span></code></pre></div>
 </section><section>
 <h2 id="questions">Questions?</h2>
 <p>@seegras</p>
